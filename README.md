@@ -1,16 +1,36 @@
-# firebase_crud_app
+# 🔥 Firebase Realtime Database CRUD
 
-A new Flutter project.
+A Flutter app demonstrating full **CRUD** (Create, Read, Update, Delete) against **Firebase Realtime Database**. It manages simple student records — each entry has a **name** and a **matric number**.
 
-## Getting Started
+## ✨ Features
 
-This project is a starting point for a Flutter application.
+- **Read** — a live, auto‑updating list of records via `FirebaseAnimatedList`.
+- **Create** — add a record (name + matric number) through a bottom‑sheet form.
+- **Update** — edit an existing record from the per‑item menu.
+- **Delete** — remove a record from the per‑item menu.
 
-A few resources to get you started if this is your first Flutter project:
+## 📱 Screenshot
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="screenshots/home.png" width="280">
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech
+
+- **Flutter** (Material Design)
+- `firebase_core` + `firebase_database`
+- Firebase config via `lib/firebase_options.dart`
+
+## 🚀 Run it
+
+```bash
+flutter pub get
+flutter run
+```
+
+> **Requirements**
+> - A Firebase project with Realtime Database enabled, wired up via `flutterfire configure` (`firebase_options.dart`) and `android/app/google-services.json`.
+> - On **Windows**, building plugin‑based apps requires **Developer Mode** to be enabled (symlink support).
+> - Make sure your Realtime Database **Security Rules** are set appropriately before publishing.
+
+## 📝 Notes
+
+A learning project for Firebase Realtime Database integration. The data keys used for create/read/update are slightly inconsistent in places (`matric` vs `Matric Number`), and delete targets a fixed node — left as‑is to reflect the original lab work.
